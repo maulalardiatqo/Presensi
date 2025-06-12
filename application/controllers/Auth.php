@@ -72,16 +72,13 @@ class Auth extends CI_Controller
         if ($user) {
             // cek aktivasi akun
             if ($user['is_active'] == 1) {
-                // cek password default admin : smekalkambangan
                 if (password_verify($password, $user['password'])) {
                     $data = [
                         'username' => $user['username'],
                         'role_id' => $user['role_id'],
-                        'id' => $user['id']
+                        'id' => $user['id_user']
                     ];
-                    // simpen $data ke session
                     $this->session->set_userdata($data);
-                    // cek role_id
                     if ($user['role_id'] == 1) {
                         redirect('admin');
                     } elseif ($user['role_id'] == 2) {

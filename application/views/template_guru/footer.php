@@ -20,11 +20,7 @@
         </div>
     </div>
 </div>
-<div class="footer">
-    <div class="copyright">
-        <p>Copyright © Designed &amp; Developed by <a href="../index.htm" target="_blank">TKJ SMK AL Amiriyah</a> 2022</p>
-    </div>
-</div>
+
 <!--**********************************
             Footer end
         ***********************************-->
@@ -122,7 +118,7 @@
     });
     jQuery(document).ready(function() {
         setTimeout(function() {
-            dlabSettingsOptions.version = 'dark';
+            dlabSettingsOptions.version = '';
             new dlabSettings(dlabSettingsOptions);
         }, 1500)
     });

@@ -56,8 +56,8 @@
             <a href="index.html" class="brand-logo">
                 <img src="<?= base_url('assets/') ?>images/logo-icon.png" alt="">
                 <div class="brand-title">
-                    <h2 class="">SMEKAL</h2>
-                    <span class="brand-sub-title">DIGITAL</span>
+                    <h2 class="">Presensi</h2>
+                    <span class="brand-sub-title">RFID</span>
                 </div>
             </a>
             <div class="nav-control">

@@ -37,7 +37,7 @@
                                     <div class="text-center mb-3">
                                         <a href="index.html"><img src="<?= base_url('assets/') ?>images/logo-login.png" alt=""></a>
                                     </div>
-                                    <h4 class="text-center mb-4">Login Applikasi</h4>
+                                    <h4 class="text-center mb-4">Login Applikasi Presensi</h4>
                                     <?= $this->session->flashdata('message'); ?>
                                     <form action="<?= base_url('auth') ?>" method="POST">
                                         <div class="mb-3">

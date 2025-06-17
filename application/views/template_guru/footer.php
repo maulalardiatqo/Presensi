@@ -52,6 +52,11 @@
 
 <script src="<?= base_url('assets/') ?>vendor/chart.js/Chart.bundle.min.js"></script>
 
+<!-- Datatable -->
+<script src="<?= base_url('assets/') ?>vendor/datatables/js/jquery.dataTables.min.js"></script>
+<script src="<?= base_url('assets/') ?>js/plugins-init/datatables.init.js"></script>
+
+
 <!-- Chart piety plugin files -->
 <script src="<?= base_url('assets/') ?>vendor/peity/jquery.peity.min.js"></script>
 <!-- Dashboard 1 -->
@@ -59,19 +64,21 @@
 
 <script src="<?= base_url('assets/') ?>vendor/owl-carousel/owl.carousel.js"></script>
 
-
-<!-- Datatable -->
-<script src="<?= base_url('assets/') ?>vendor/datatables/js/jquery.dataTables.min.js"></script>
-<script src="<?= base_url('assets/') ?>js/plugins-init/datatables.init.js"></script>
-
 <script src="<?= base_url('assets/') ?>js/custom.min.js"></script>
 <script src="<?= base_url('assets/') ?>js/dlabnav-init.js"></script>
 <script src="<?= base_url('assets/') ?>js/demo.js"></script>
 <script src="<?= base_url('assets/') ?>js/styleSwitcher.js"></script>
 
+
+<!-- Calenders -->
+<script src="<?= base_url('assets/') ?>vendor/fullcalendar/js/main.min.js"></script>
+<script src="<?= base_url('assets/') ?>js/plugins-init/fullcalendar-init.js"></script>
+<script src="<?= base_url('assets/') ?>vendor/moment/moment.min.js"></script>
+
 <!-- Sweet Alert -->
 <script src="<?= base_url('assets/') ?>swettjs/dist/sweetalert2.all.min.js"></script>
 <script src="<?= base_url('assets/') ?>swettjs/scriptku.js"></script>
+<script src="<?= base_url('assets/') ?>js/<?= $js ?>.js"></script>
 <script>
     function cardsCenter() {
 
@@ -122,6 +129,22 @@
             new dlabSettings(dlabSettingsOptions);
         }, 1500)
     });
+  
+$(document).ready(function() {
+  $('.open-edit-modal').on('click', function() {
+    const btn = $(this);
+    $('#modal_id_presensi').val(btn.data('id'));
+    $('#modal_nis').val(btn.data('nis'));
+    $('#modal_nama').val(btn.data('nama'));
+    $('#modal_date').val(btn.data('date'));
+    $('#modal_timein').val(btn.data('timein'));
+    $('#modal_timeout').val(btn.data('timeout'));
+    $('#modal_status').val(btn.data('status'));
+    $('#modal_keterangan').val(btn.data('keterangan'));
+
+    $('#editPresensiModal').modal('show');
+  });
+});
 </script>
 
 </body>

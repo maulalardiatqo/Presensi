@@ -23,8 +23,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-// $config['base_url'] = 'http://localhost:8080/smekal_digital';
-$config['base_url'] = 'http://localhost/absensi';
+$config['base_url'] = 'https://presensitaswir.my.id/';
+// local
+// $config['base_url'] = 'http://localhost/absensi';
+//production
+// $config['base_url'] = 'http://presensitaswir.rf.gd/';
 // $config['base_url'] = 'https://smekal-smart.com/';
 
 /*

@@ -14,12 +14,18 @@
                       <span class="nav-text">Kelola Presensi</span>
                   </a>
               </li>
-              <li><a href="<?= base_url('guru/reportPresensi') ?>" aria-expanded="false">
-                      <i class="fas fa-book"></i>
-                      <span class="nav-text">Report Presensi</span>
+               <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
+                        <i class="fas fa-book"></i>
+                        <span class="nav-text">Report Presensi</span>
                   </a>
+                  <ul aria-expanded="false">
+                        <li><a href="<?= base_url('guru/detailReport') ?>">Detail Pertanggal</a></li>
+                        <li><a href="<?= base_url('guru/summaryReport') ?>">Summary Perbulan</a></li>
+                        <li><a href="<?= base_url('guru/filterReport') ?>">Report Filter Date</a></li>
+                  </ul>
               </li>
           </ul>
+          
       </div>
   </div>
   <!--**********************************

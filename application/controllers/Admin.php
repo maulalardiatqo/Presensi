@@ -29,7 +29,7 @@ class Admin extends CI_Controller
     parent::__construct();
 
     // List method yang tidak butuh login
-    $public_methods = ['get_mode', 'register_uid', 'presensi', 'set_latest_uid', 'get_latest_uid'];  // tambahkan di sini
+    $public_methods = ['get_mode', 'register_uid', 'presensi', 'set_latest_uid', 'get_latest_uid', 'generate_absen_tidak_hadir_otomatis'];  // tambahkan di sini
 
     // Ambil method yang dipanggil sekarang
     $current_method = $this->router->fetch_method();
@@ -312,6 +312,16 @@ class Admin extends CI_Controller
             redirect('admin/kelas');
         }
     }
+    public function hapusKelas($id)
+    {
+         $sql = "DELETE FROM kelas  WHERE id_kelas = $id";
+        $this->db->query($sql, [$id]);
+
+        $this->session->set_flashdata('flash', 'Data dihapus');
+        $this->session->set_flashdata('flashtype', 'success');
+
+        redirect('admin/kelas');
+    }
     public function tambahGuru()
     {
         $kode_guru = $this->input->post('kode_guru');
@@ -431,7 +441,7 @@ class Admin extends CI_Controller
     }
     public function hapusSiswa($nis)
     {
-        $sql = "DELETE s.*, u.* FROM siswa s, user u WHERE s.nis = $nis AND u.username = $nis";
+        $sql = "DELETE FROM siswa  WHERE id_siswa = $nis";
         $this->db->query($sql, [$nis]);
 
         $this->session->set_flashdata('flash', 'Data dihapus');

@@ -61,7 +61,7 @@
             <a href="index.html" class="brand-logo">
                 <!-- <img src="<?= base_url('assets/') ?>images/logo-login.png" alt=""> -->
                 <div class="brand-title">
-                    <h2 class="">Absensi</h2>
+                    <h2 class="">Presensi</h2>
                     <span class="brand-sub-title">RFID</span>
                 </div>
             </a>
